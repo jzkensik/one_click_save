@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+  
+    "name": "One-Click-Save",
+    "description": "This will allow you to save images with one keyboard shortcut",
+    "version": "1.0",
+  
+    "browser_action": {
+     "default_icon": "icon.png",
+     "default_popup": "popup.html"
+    },
+
+    "content_scripts": [
+        {
+          "js": ["content.js"],
+          "css": ["content.css"],
+          "matches": ["https://*.google.com/*"]
+        }
+      ],
+    "permissions": [
+     "activeTab"
+     ]
+  }
