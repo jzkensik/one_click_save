@@ -32,13 +32,24 @@
 //         })
 //     })
 // }
+var img_url = '';
 document.addEventListener('mouseover', simulateClick);
 function simulateClick(e) {
+      //var browser=window.browser||window.chrome;
       if(e.shiftKey) {
         if (e.target.currentSrc) {
-            console.log(e.target.currentSrc)
+            chrome.runtime.sendMessage(e.target.currentSrc, function(response) {
+                console.log(response);
+              });
+            // var downloading = browser.downloads.download({
+            //     url: e.target.currentSrc,
+            //     saveAs: true
+            //     //filename: this is a good option
+            // });
+            // downloading.then(onStartedDownload, onFailed);
         }
       }
+
 }
     // document.addEventListener('mouseover', function(e) {
     //     // if(f.key == '`') {

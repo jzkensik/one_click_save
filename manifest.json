@@ -9,7 +9,9 @@
      "default_icon": "./images/icon.png",
      "default_popup": "popup.html"
     },
-
+    "background": {
+      "page": "background.html"
+    },
     "content_scripts": [
         {
           "js": ["content.js"],
@@ -18,6 +20,8 @@
         }
       ],
     "permissions": [
-     "activeTab"
+     "activeTab",
+     "background",
+     "downloads"
      ]
   }
