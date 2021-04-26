@@ -38,7 +38,7 @@ function simulateClick(e) {
       //var browser=window.browser||window.chrome;
       if(e.shiftKey) {
         if (e.target.currentSrc) {
-            chrome.runtime.sendMessage(e.target.currentSrc, function(response) {
+            chrome.runtime.sendMessage(e.target.currentSrc, (response) => {
                 console.log('response below')
                 console.log(response);
               });

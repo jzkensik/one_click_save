@@ -16,19 +16,21 @@ chrome.runtime.onMessage.addListener(
       function onFailed(error) {
         console.log(`Download failed: ${error}`);
       }
+    var browser = window.chrome || window.browser;
     var downloading = browser.downloads.download({
-        url: e.target.currentSrc,
-        saveAs: true
+        url: arg
+        //saveAs: true
         //filename: this is a good option
     });
-    downloading.then(onStartedDownload, onFailed);
+    console.log(downloading)
+    // downloading.then(onStartedDownload, onFailed);
     // sendResponse({farewell: "goodbye", url: img_url});
     //    chrome.downloads.download({
     //    url: img_url,
     // //    filename: saveas,
     //   saveAs: false
     //   });
-    Promise.resolve("").then(result => sendResponse(arg));
+    //Promise.resolve("").then(result => sendResponse(arg));
     return true;
      });
   
