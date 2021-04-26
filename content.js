@@ -20,15 +20,46 @@
 //     }
 // })
 
-document.addEventListener('mouseover', function(f) {
-    document.addEventListener('keypress', function(e) {
-        // e = e || window.event;
-        // var target = e.target;
-        var pressed = true
-        console.log(pressed)
-        if(pressed == true) {
-            console.log(f.target.baseURI + '    ' + e.key);
-            setTimeout(pressed = false, 1000);
+// document.addEventListener('click', function() {
+//     console.log(document.getElementsByTagName('img')[0])
+// })
+// for(item of document.getElementsByTagName('img')) {
+//     item.addEventListener('keypress', function(f) {
+//         item.addEventListener('mouseover', function(e) {
+//             e = e || window.event;
+//             // var target = e.target;
+//             console.log(f.target + '    ' + e.target + '  gottem');
+//         })
+//     })
+// }
+document.addEventListener('mouseover', simulateClick);
+function simulateClick(e) {
+      if(e.shiftKey) {
+        if (e.target.currentSrc) {
+            console.log(e.target.currentSrc)
         }
-    })
-})
+      }
+}
+    // document.addEventListener('mouseover', function(e) {
+    //     // if(f.key == '`') {
+    //     //     console.log(e.target.currentSrc)
+    //     //     console.log(f.target + '  ' + f.key + '  gotten')
+    //     // }
+    // })
+
+// document.addEventListener('click', function() {
+//     console.log(typeof document.getElementsByTagName('img'))
+//     console.log(document.getElementsByTagName('img'))
+//     // document.getElementsByTagName('img').forEach(item => {
+//     //     console.log(item)
+//     // })
+// })
+// document.getElementsByTagName('img').forEach(item => {
+//     item.addEventListener('keypress', function(f) {
+//         item.addEventListener('mouseover', function(e) {
+//             e = e || window.event;
+//             // var target = e.target;
+//             console.log(f.target + '    ' + e.target + '  gottem');
+//         })
+//     })
+// })
