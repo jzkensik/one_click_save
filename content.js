@@ -39,6 +39,7 @@ function simulateClick(e) {
       if(e.shiftKey) {
         if (e.target.currentSrc) {
             chrome.runtime.sendMessage(e.target.currentSrc, function(response) {
+                console.log('response below')
                 console.log(response);
               });
             // var downloading = browser.downloads.download({
