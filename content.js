@@ -41,6 +41,10 @@ function simulateClick(e) {
             chrome.runtime.sendMessage(e.target.currentSrc, (response) => {
                 console.log('response below')
                 console.log(response);
+                //there's some solid link manipulation you can do to get the proper images.
+                //try different combinations that get you from thumbnail to fullres.
+                //there's also a thing called imagus, that could help
+                //actually it seems like this is working with PNGs. Needs more testing
               });
             // var downloading = browser.downloads.download({
             //     url: e.target.currentSrc,
