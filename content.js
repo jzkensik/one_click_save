@@ -26,11 +26,16 @@ document.addEventListener("click", checkTab);
 function checkTab() {
   if (document.getElementById('locationChange')) {
     document.getElementById('locationChange').addEventListener("click", changeLocation);
-    console.log('okay what about now')
   }
 }
 function changeLocation() {
-  alert('hey check this out')
+ document.querySelector('#locationChange').innerText = 'Hide';
+ var confirm = document.createElement("h3");
+ //confirm.innerHTML = "done!";      
+ confirm.innerHTML = document.getElementById('new_dest').value
+ document.body.appendChild(confirm);  
+//  setInterval()
+//  document.body.removeChild(confirm);
 }
 
 // document.getElementsByTagName('img').forEach(item => {
