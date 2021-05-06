@@ -22,8 +22,15 @@ function simulateClick(e) {
       }
 
 }
-function changeLocation(e){
-console.log('hey check this out')
+document.addEventListener("click", checkTab);
+function checkTab() {
+  if (document.getElementById('locationChange')) {
+    document.getElementById('locationChange').addEventListener("click", changeLocation);
+    console.log('okay what about now')
+  }
+}
+function changeLocation() {
+  alert('hey check this out')
 }
 
 // document.getElementsByTagName('img').forEach(item => {
