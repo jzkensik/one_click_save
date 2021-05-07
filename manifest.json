@@ -16,7 +16,7 @@
         {
           "js": ["content.js"],
           "css": ["content.css"],
-          "matches": ["https://*.facebook.com/*", "https://*.twitter.com/*"]
+          "matches": ["https://*.facebook.com/*", "https://*.twitter.com/*", "https://*.pixiv.net/*", "https://*.reddit.com/*"]
         }
       ],
     "permissions": [

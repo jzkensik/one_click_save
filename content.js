@@ -22,28 +22,18 @@ function simulateClick(e) {
       }
 
 }
-document.addEventListener("click", checkTab);
-function checkTab() {
-  if (document.getElementById('locationChange')) {
-    document.getElementById('locationChange').addEventListener("click", changeLocation);
-  }
-}
-function changeLocation() {
- document.querySelector('#locationChange').innerText = 'Hide';
- var confirm = document.createElement("h3");
- //confirm.innerHTML = "done!";      
- confirm.innerHTML = document.getElementById('new_dest').value
- document.body.appendChild(confirm);  
-//  setInterval()
-//  document.body.removeChild(confirm);
-}
-
-// document.getElementsByTagName('img').forEach(item => {
-//     item.addEventListener('keypress', function(f) {
-//         item.addEventListener('mouseover', function(e) {
-//             e = e || window.event;
-//             // var target = e.target;
-//             console.log(f.target + '    ' + e.target + '  gottem');
-//         })
-//     })
-// })
+// document.addEventListener("click", checkTab);
+// function checkTab() {
+//   if (document.getElementById('locationChange')) {
+//     document.getElementById('locationChange').addEventListener("click", changeLocation);
+//   }
+// }
+// function changeLocation() {
+//  document.querySelector('#locationChange').innerText = 'Hide';
+//  var confirm = document.createElement("h3");
+//  confirm.innerHTML = "done!";      
+//  //confirm.innerHTML = document.getElementById('new_dest').value
+//  document.body.appendChild(confirm);  
+// //  setInterval()
+// //  document.body.removeChild(confirm);
+// }y

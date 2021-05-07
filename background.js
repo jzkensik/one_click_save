@@ -6,7 +6,7 @@ chrome.runtime.onMessage.addListener(
     var downloading = browser.downloads.download({
         url: arg
         //saveAs: true
-        //filename: this is a good option
+        //filename: "\2_1_2021\"
     });
     console.log(downloading)
     // downloading.then(onStartedDownload, onFailed);
